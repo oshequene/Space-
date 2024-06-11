@@ -11,10 +11,6 @@ old = None
 
 @bot.callback_query_handler(func=lambda call: call.data == 'ok')
 def rand(call):
-    global old
-    
-    if old:
-        bot.delete_message(call.message.chat.id, old.message_id)
 
     min_date = datetime(1995,6,16)
     now = datetime.now()
